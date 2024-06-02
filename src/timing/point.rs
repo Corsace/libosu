@@ -98,7 +98,9 @@ impl FromStr for TimingPoint {
 
     // parts.len() must be >= 2 at this point
 
-    let timestamp = parts[0].parse::<i32>()?;
+    let timestamp = parts[0]
+      .parse::<i32>()
+      .or(parts[0].parse::<f32>().and_then(|x| Ok(x as i32)))?;
     let time = Millis(timestamp);
 
     let mpb = parts[1].parse::<f64>()?;
