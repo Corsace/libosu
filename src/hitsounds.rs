@@ -34,13 +34,13 @@ bitflags! {
     #[allow(non_upper_case_globals)]
     pub struct Additions: u32 {
         /// Whistle hitsound
-        const WHISTLE = 1 << 1;
+        const WHISTLE = 1 << 0;
 
         /// Finish (cymbal) hitsound
-        const FINISH = 1 << 2;
+        const FINISH = 1 << 1;
 
         /// Clap hitsound
-        const CLAP = 1 << 3;
+        const CLAP = 1 << 2;
     }
 }
 
