@@ -33,14 +33,17 @@ bitflags! {
     #[derive(Clone, Debug)]
     #[allow(non_upper_case_globals)]
     pub struct Additions: u32 {
+
+        /// Normal hitsound
+        const NORMAL = 1 << 0;
         /// Whistle hitsound
-        const WHISTLE = 1 << 0;
+        const WHISTLE = 1 << 1;
 
         /// Finish (cymbal) hitsound
-        const FINISH = 1 << 1;
+        const FINISH = 1 << 2;
 
         /// Clap hitsound
-        const CLAP = 1 << 2;
+        const CLAP = 1 << 3;
     }
 }
 
