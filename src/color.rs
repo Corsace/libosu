@@ -28,7 +28,7 @@ impl FromStr for Color {
   type Err = ParseError;
 
   fn from_str(line: &str) -> Result<Color, Self::Err> {
-    let mut s = line.split(" : ");
+    let mut s = line.split(":");
     s.next().ok_or(ParseError::MissingColorComponent)?;
     let s = s.next().ok_or(ParseError::MissingColorComponent)?;
     let s = s.split(',').collect::<Vec<_>>();
